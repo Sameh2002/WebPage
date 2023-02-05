@@ -179,7 +179,7 @@ nav ul a:hover {
     color: #fff;
 }
 .menu .titel .layer .border {
-    width: 4%;
+    width: 60px;
     border-top: 2.5px solid #72a411;
 }
 .menu .titel .layer p {
@@ -226,7 +226,6 @@ nav ul a:hover {
     color: #777;
     font-weight: 200;
     font-size: 16px;
-    /* font-style: italic; */
 }
 
 
@@ -235,7 +234,6 @@ nav ul a:hover {
     background: url('../img/gallery-bg.jpg') fixed;
     background-size: cover;
     background-size: contain contain;
-    margin-bottom: 50px;
 }
 .gallery .titel .layer {
     width: 100%;
@@ -252,7 +250,7 @@ nav ul a:hover {
     color: #fff;
 }
 .gallery .titel .layer .border {
-    width: 4%;
+    width: 70px;
     border-top: 2.5px solid #72a411;
 }
 .gallery .titel .layer p {
@@ -260,16 +258,15 @@ nav ul a:hover {
     font-size: 22px;
     color: rgba(255,255,255,0.8);
 }
-.gallery .nav-gallery {
-    margin-bottom: 50px;
-}
 .gallery .nav-gallery ul {
+    padding: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     list-style-type: none;
 }
 .gallery .nav-gallery ul li {
+    box-sizing: border-box;
     padding: 0px 10px;
 }
 .gallery .nav-gallery ul a {
@@ -373,6 +370,7 @@ nav ul a:hover {
     width: calc(100%/3);
     box-sizing: border-box;
     padding:  30px;
+    margin-bottom: 50px;
 }
 .chefs .layer .container .team .section img {
     width: 100%;
@@ -455,6 +453,7 @@ nav ul a:hover {
     width: 48%;
 }
 input {
+    font-size: 18px;
     width: 100%;
     box-sizing: border-box;
     padding: 6px 12px;
@@ -464,6 +463,7 @@ input {
     margin-bottom: 10px;
 }
 textarea {
+    font-size: 16px;
     width: 100%;
     box-sizing: border-box;
     padding: 6px 12px;
@@ -549,13 +549,19 @@ footer a:hover {
 
 @media screen  and (max-width: 768px) {
     nav {
-        background-color: black;
-        position: relative;
+        background-color: rgba(0, 0, 0, 0.8);
+        /* position: relative; */
     }
-    nav .container,
-    nav ul {
+    nav .container {
         flex-direction: column;
         align-items: center;
+    }
+    nav ul {
+        /* flex-direction: column; */
+        justify-content: center;
+    }
+    nav ul li {
+        padding: 8px 20px;
     }
     .chefs .layer .container .team .section {
         width: calc(100%/2);
@@ -570,10 +576,20 @@ footer a:hover {
     }
 }
 @media screen  and (max-width: 576px) {
+    .about .container {
+        justify-content: center;
+    }
     .about .container .imgs {width: 100%; margin-bottom: 50px;}
-    .about .container .docment {width: 1005;}
+    .about .container .docment {width: 100%;}
     .menu-all .menu-section {
         width: 100%;
+    }
+    .gallery .nav-gallery ul {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .gallery .nav-gallery ul li  {
+        margin: 20px 0px;
     }
     .gallery .container .portfolio {
         width: calc(100%/1);
